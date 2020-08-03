@@ -10,4 +10,8 @@ describe("user can check the BMI", () => {
   it("display the BMI value ", () => {
     cy.get("#result").should('contain', 'Your BMI value is: 23.88')
   })
+
+  it("display a message to evalute user BMI", () => {
+    cy.get("#result").should("contain", "and you are Healthy")
+  })
 })
